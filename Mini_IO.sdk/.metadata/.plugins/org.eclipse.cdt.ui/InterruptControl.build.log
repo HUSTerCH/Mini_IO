@@ -1,0 +1,21 @@
+18:48:58 **** Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+
+18:48:59 Build Finished (took 1s.238ms)
+

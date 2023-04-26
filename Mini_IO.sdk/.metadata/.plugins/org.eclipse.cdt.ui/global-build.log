@@ -1,0 +1,2153 @@
+19:18:43 **** Build of project Hello_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+19:18:57 **** Build of configuration Debug for project Hello ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Hello_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Hello_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: Hello.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Hello_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Hello.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Hello.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size Hello.elf  |tee "Hello.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	Hello.elf
+Finished building: Hello.elf.size
+ 
+11:47:26 **** Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+11:47:47 **** Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+11:49:20 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for 'all'.
+11:49:21 **** Clean-only build of configuration Debug for project Hello ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  Hello.elf.size  Hello.elf
+ 
+11:49:21 **** Incremental Build of configuration Debug for project Hello ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Hello_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:10: fatal error: xil_printf.h: No such file or directory
+ #include "xil_printf.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+11:53:48 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for 'all'.
+11:54:02 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+
+**** Build of configuration Debug for project ProgramControl ****
+
+Nothing to build for project ProgramControl
+19:57:41 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ProgramControl.elf] Error 1
+19:59:12 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+20:00:34 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for 'all'.
+20:05:51 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+make: Nothing to be done for 'all'.
+20:12:00 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:30:59 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:33:57 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:38:53 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+20:39:01 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:55:59 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+20:56:49 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+
+**** Build of configuration Debug for project InterruptControl ****
+
+Nothing to build for project InterruptControl
+21:05:51 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl.elf] Error 1
+21:10:11 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c: In function 'main':
+../src/InterruptControl.c:47:58: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK | XPAR_AXI_TIMER_0_INTERRUPT_MASK);  // 对中断控制器进行中断使能
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                          XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../src/InterruptControl.c:47:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/InterruptControl.c: In function 'My_ISR':
+../src/InterruptControl.c:62:26: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+     } else if ((status & XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) == XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) {
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+make: *** [src/subdir.mk:23: src/InterruptControl.o] Error 1
+21:13:55 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c: In function 'main':
+../src/InterruptControl.c:47:58: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK | XPAR_AXI_TIMER_0_INTERRUPT_MASK);  // 锟斤拷锟叫断匡拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫讹拷使锟斤拷
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                          XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../src/InterruptControl.c:47:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/InterruptControl.c: In function 'My_ISR':
+../src/InterruptControl.c:62:26: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+     } else if ((status & XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) == XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) {
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+make: *** [src/subdir.mk:23: src/InterruptControl.o] Error 1
+21:17:46 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:18:03 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:18:55 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:19:28 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:27:29 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:33:55 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:36:06 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:36:56 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:37:19 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:39:01 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:39:07 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:39:55 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: InterruptControl.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 66040 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl.elf] Error 1
+21:40:16 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: InterruptControl.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 66040 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl.elf] Error 1
+21:40:44 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:40:52 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:41:45 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:42:14 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:44:11 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:44:18 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:44:42 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:47:50 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:47:56 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:49:59 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:50:08 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:51:27 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:51:35 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:51:57 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:52:02 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:53:00 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4532	    286	   3118	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:53:05 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:54:09 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4076	    276	   3120	   7472	   1d30	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:54:17 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:54:58 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c: In function 'btnHandler':
+../src/InterruptControl.c:94:5: error: too many arguments to function 'print'
+     print("%d",btncode);
+     ^~~~~
+In file included from d:\vivado_2018_03\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../HelloWorld_bsp/microblaze_0/include/xil_printf.h:8,
+                 from ../../HelloWorld_bsp/microblaze_0/include/xil_io.h:61,
+                 from ../src/InterruptControl.c:8:
+d:\vivado_2018_03\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/subdir.mk:23: src/InterruptControl.o] Error 1
+21:55:07 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c: In function 'btnHandler':
+../src/InterruptControl.c:94:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(btncode);
+           ^~~~~~~
+In file included from d:\vivado_2018_03\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../HelloWorld_bsp/microblaze_0/include/xil_printf.h:8,
+                 from ../../HelloWorld_bsp/microblaze_0/include/xil_io.h:61,
+                 from ../src/InterruptControl.c:8:
+d:\vivado_2018_03\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: expected 'const char8 * {aka const char *}' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4240	    276	   3116	   7632	   1dd0	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:55:34 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: InterruptControl.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 65560 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl.elf] Error 1
+21:56:06 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: InterruptControl.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 65560 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl.elf] Error 1
+21:56:24 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: InterruptControl.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 65560 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl.elf] Error 1
+21:56:36 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4076	    276	   3120	   7472	   1d30	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+21:56:48 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:57:43 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+21:59:23 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:00:32 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:08:14 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:08:29 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:08:57 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c: In function 'main':
+../src/InterruptControl.c:36:81: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+ Xil_Out32(XPAR_INTC_0_BASEADDR+XIN_IER_OFFSET,XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK|XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK|XPAR_AXI_TIMER_0_INTERRUPT_MASK);//对中断控制器进行中断使能(包括时钟中断源switch中断源button中断源)
+                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                                 XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../src/InterruptControl.c:36:81: note: each undeclared identifier is reported only once for each function it appears in
+../src/InterruptControl.c: In function 'My_ISR':
+../src/InterruptControl.c:51:17: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+ else if((status&XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK)==XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK)
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+make: *** [src/subdir.mk:23: src/InterruptControl.o] Error 1
+22:09:50 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c: In function 'main':
+../src/InterruptControl.c:36:81: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+ Xil_Out32(XPAR_INTC_0_BASEADDR+XIN_IER_OFFSET,XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK|XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK|XPAR_AXI_TIMER_0_INTERRUPT_MASK);//对中断控制器进行中断使能(包括时钟中断源switch中断源button中断源)
+                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                                 XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../src/InterruptControl.c:36:81: note: each undeclared identifier is reported only once for each function it appears in
+../src/InterruptControl.c: In function 'My_ISR':
+../src/InterruptControl.c:51:17: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+ else if((status&XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK)==XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK)
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+make: *** [src/subdir.mk:23: src/InterruptControl.o] Error 1
+22:13:07 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3312	    280	   3112	   6704	   1a30	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:14:53 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:15:02 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:15:58 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:17:03 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:17:25 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:17:46 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:18:29 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:18:42 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:19:43 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:19:59 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:21:24 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4536	    286	   3114	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:21:35 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:22:38 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4532	    286	   3118	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:22:44 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:34 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4544	    286	   3114	   7944	   1f08	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:23:45 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:24:45 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4520	    286	   3114	   7920	   1ef0	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:27:41 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4556	    286	   3118	   7960	   1f18	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:27:45 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:29:47 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4544	    286	   3114	   7944	   1f08	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:29:52 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:30:38 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4532	    286	   3118	   7936	   1f00	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:30:44 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:31:54 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4524	    286	   3118	   7928	   1ef8	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:32:01 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:33:34 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:33:40 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:41:13 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:41:20 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+22:41:37 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:42:19 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:42:31 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:42:50 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:43:36 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:43:58 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:44:42 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+22:45:55 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+22:46:02 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:29:21 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+23:29:33 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:30:31 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:30:46 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:35:23 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4632	    286	   3114	   8032	   1f60	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+23:35:31 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:37:09 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4632	    286	   3114	   8032	   1f60	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+23:37:19 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:39:48 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4632	    286	   3114	   8032	   1f60	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+23:39:55 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:45:48 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4632	    286	   3114	   8032	   1f60	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+23:45:58 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+23:46:36 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+23:46:44 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+08:19:37 **** Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+08:20:01 **** Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+08:20:05 **** Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c:1:10: fatal error: xil_io.h: No such file or directory
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/InterruptControl.o] Error 1
+08:20:09 **** Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+../src/ProgramControl.c:9:10: fatal error: xil_printf.h: No such file or directory
+ #include "xil_printf.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/ProgramControl.o] Error 1
+08:22:21 **** Auto Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+08:22:38 **** Auto Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+08:22:39 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+08:22:40 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+08:24:58 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+08:32:24 **** Build of project interrupt_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+
+**** Build of configuration Debug for project interrupt ****
+
+Nothing to build for project interrupt
+08:32:45 **** Auto Build of configuration Debug for project interrupt ****
+make all 
+Building file: ../src/interrupt.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt.o" -I../../interrupt_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt.d" -MT"src/interrupt.o" -o "src/interrupt.o" "../src/interrupt.c"
+Finished building: ../src/interrupt.c
+ 
+Building target: interrupt.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../interrupt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "interrupt.elf"  ./src/interrupt.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: interrupt.elf] Error 1
+08:33:27 **** Auto Build of configuration Debug for project interrupt ****
+make all 
+Building file: ../src/interrupt.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt.o" -I../../interrupt_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt.d" -MT"src/interrupt.o" -o "src/interrupt.o" "../src/interrupt.c"
+../src/interrupt.c: In function 'main':
+../src/interrupt.c:56:58: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK | XPAR_AXI_TIMER_0_INTERRUPT_MASK);  //Enable the interrupt controller
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                          XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../src/interrupt.c:56:58: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/interrupt.o] Error 1
+08:34:30 **** Auto Build of configuration Debug for project interrupt ****
+make all 
+Building file: ../src/interrupt.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt.o" -I../../interrupt_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt.d" -MT"src/interrupt.o" -o "src/interrupt.o" "../src/interrupt.c"
+../src/interrupt.c:14:0: warning: "XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK" redefined
+ #define XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK 0x000003U
+ 
+In file included from ../../interrupt_bsp/microblaze_0/include/xil_printf.h:12:0,
+                 from ../../interrupt_bsp/microblaze_0/include/xil_io.h:61,
+                 from ../src/interrupt.c:8:
+../../interrupt_bsp/microblaze_0/include/xparameters.h:631:0: note: this is the location of the previous definition
+ #define XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK 0X000002U
+ 
+../src/interrupt.c: In function 'main':
+../src/interrupt.c:57:58: error: 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK | XPAR_AXI_TIMER_0_INTERRUPT_MASK);  //Enable the interrupt controller
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                          XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../src/interrupt.c:57:58: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/interrupt.o] Error 1
+08:34:37 **** Auto Build of configuration Debug for project interrupt ****
+make all 
+Building file: ../src/interrupt.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt.o" -I../../interrupt_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt.d" -MT"src/interrupt.o" -o "src/interrupt.o" "../src/interrupt.c"
+Finished building: ../src/interrupt.c
+ 
+Building target: interrupt.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../interrupt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "interrupt.elf"  ./src/interrupt.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: interrupt.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size interrupt.elf  |tee "interrupt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	interrupt.elf
+Finished building: interrupt.elf.size
+ 
+08:34:53 **** Auto Build of configuration Debug for project interrupt ****
+make all 
+Building file: ../src/interrupt.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt.o" -I../../interrupt_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt.d" -MT"src/interrupt.o" -o "src/interrupt.o" "../src/interrupt.c"
+Finished building: ../src/interrupt.c
+ 
+Building target: interrupt.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../interrupt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "interrupt.elf"  ./src/interrupt.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: interrupt.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size interrupt.elf  |tee "interrupt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4616	    286	   3114	   8016	   1f50	interrupt.elf
+Finished building: interrupt.elf.size
+ 
+08:36:34 **** Incremental Build of configuration Debug for project interrupt ****
+make all 
+make: Nothing to be done for 'all'.
+08:36:46 **** Incremental Build of configuration Debug for project interrupt ****
+make all 
+make: Nothing to be done for 'all'.
+08:36:56 **** Incremental Build of configuration Debug for project interrupt ****
+make all 
+make: Nothing to be done for 'all'.
+08:37:29 **** Auto Build of configuration Debug for project interrupt ****
+make all 
+Building file: ../src/interrupt.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt.o" -I../../interrupt_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/interrupt.d" -MT"src/interrupt.o" -o "src/interrupt.o" "../src/interrupt.c"
+Finished building: ../src/interrupt.c
+ 
+Building target: interrupt.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../interrupt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "interrupt.elf"  ./src/interrupt.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: interrupt.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size interrupt.elf  |tee "interrupt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4612	    286	   3118	   8016	   1f50	interrupt.elf
+Finished building: interrupt.elf.size
+ 
+08:37:38 **** Incremental Build of configuration Debug for project interrupt ****
+make all 
+make: Nothing to be done for 'all'.
+08:59:35 **** Auto Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+08:59:55 **** Auto Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+08:59:57 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4596	    286	   3118	   8000	   1f40	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+08:59:59 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+09:13:10 **** Auto Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+09:13:28 **** Auto Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+09:13:29 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+../src/InterruptControl.c: In function 'main':
+../src/InterruptControl.c:49:58: error: 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK'?
+     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK | XPAR_AXI_TIMER_0_INTERRUPT_MASK);  //Enable the interrupt controller
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                          XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK
+../src/InterruptControl.c:49:58: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/InterruptControl.o] Error 1
+09:13:30 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+09:14:04 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4612	    286	   3118	   8016	   1f50	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+09:14:18 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:14:43 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+09:14:50 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:15:59 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:16:13 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:16:33 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:16:57 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:17:57 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:19:49 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+09:21:44 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:22:12 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:23:17 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:26:11 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4556	    286	   3118	   7960	   1f18	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+09:26:57 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:27:09 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:27:27 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:27:42 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+09:27:47 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:28:08 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:28:51 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:29:03 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+09:29:43 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+09:41:00 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+09:43:15 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+18:48:22 **** Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+18:48:47 **** Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+18:48:58 **** Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+18:48:59 **** Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+
+**** Build of configuration Debug for project SeriesIOControl ****
+
+Nothing to build for project SeriesIOControl
+18:52:40 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: SeriesIOControl.elf] Error 1
+18:53:26 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+18:54:19 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+18:54:29 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.

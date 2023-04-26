@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Tue Apr 11 20:32:55 2023
+# Process ID: 20504
+# Current directory: D:/vivado_project/Mini_IO/Mini_IO.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/vivado_project/Mini_IO/Mini_IO.sdk/webtalk/webtalk.log
+# Journal file: D:/vivado_project/Mini_IO/Mini_IO.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

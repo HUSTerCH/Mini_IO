@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="design_mb_wrapper.bit" key="design_mb_wrapper_hw_platform_0-bitFile"/>
+	<item value="Auto Detect" key="design_mb_wrapper_hw_platform_0-device"/>
+	<item value="design_mb_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="D:\vivado_project\Mini_IO\Mini_IO.sdk\InterruptControl\Debug\InterruptControl.elf" key="design_mb_wrapper_hw_platform_0-microblaze_0-initElf"/>
+	<item value="design_mb_wrapper.mmi" key="design_mb_wrapper_hw_platform_0-bmmFile"/>
+	<item value="false" key="design_mb_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Local" key="design_mb_wrapper_hw_platform_0-target"/>
+</section>

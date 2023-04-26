@@ -1,0 +1,22 @@
+verilog xil_defaultlib --include "../../../../Mini_IO.srcs/sources_1/bd/design_mb/ipshared/85a3" --include "../../../../Mini_IO.srcs/sources_1/bd/design_mb/ipshared/ec67/hdl" --include "../../../../Mini_IO.srcs/sources_1/bd/design_mb/ipshared/1b7e/hdl/verilog" --include "../../../../Mini_IO.srcs/sources_1/bd/design_mb/ipshared/122e/hdl/verilog" --include "../../../../Mini_IO.srcs/sources_1/bd/design_mb/ipshared/7d3c/hdl/verilog" --include "../../../../Mini_IO.srcs/sources_1/bd/design_mb/ipshared/c45e/hdl/verilog" \
+"../../../bd/design_mb/ip/design_mb_lmb_bram_0/sim/design_mb_lmb_bram_0.v" \
+"../../../bd/design_mb/ip/design_mb_clk_wiz_1_0/design_mb_clk_wiz_1_0_clk_wiz.v" \
+"../../../bd/design_mb/ip/design_mb_clk_wiz_1_0/design_mb_clk_wiz_1_0.v" \
+"../../../bd/design_mb/ip/design_mb_xbar_0/sim/design_mb_xbar_0.v" \
+"../../../bd/design_mb/ip/design_mb_xlconcat_0_0/sim/design_mb_xlconcat_0_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_0/sim/bd_fc76_ila_lib_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_1/bd_fc76_g_inst_0_gigantic_mux.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_1/sim/bd_fc76_g_inst_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_2/sim/bd_fc76_slot_1_aw_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_3/sim/bd_fc76_slot_1_w_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_4/sim/bd_fc76_slot_1_b_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_5/sim/bd_fc76_slot_1_ar_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/ip/ip_6/sim/bd_fc76_slot_1_r_0.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/bd_0/sim/bd_fc76.v" \
+"../../../bd/design_mb/ip/design_mb_system_ila_0_0/sim/design_mb_system_ila_0_0.v" \
+"../../../bd/design_mb/ip/design_mb_auto_pc_0/sim/design_mb_auto_pc_0.v" \
+"../../../bd/design_mb/sim/design_mb.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

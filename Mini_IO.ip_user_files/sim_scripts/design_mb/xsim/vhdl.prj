@@ -1,0 +1,20 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_mb/ip/design_mb_microblaze_0_0/sim/design_mb_microblaze_0_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_dlmb_v10_0/sim/design_mb_dlmb_v10_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_ilmb_v10_0/sim/design_mb_ilmb_v10_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_dlmb_bram_if_cntlr_0/sim/design_mb_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_ilmb_bram_if_cntlr_0/sim/design_mb_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_mdm_1_0/sim/design_mb_mdm_1_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_rst_clk_wiz_1_100M_0/sim/design_mb_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_uartlite_0_0/sim/design_mb_axi_uartlite_0_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_gpio_0_0/sim/design_mb_axi_gpio_0_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_gpio_1_0/sim/design_mb_axi_gpio_1_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_gpio_2_0/sim/design_mb_axi_gpio_2_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_intc_0_0/sim/design_mb_axi_intc_0_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_timer_0_0/sim/design_mb_axi_timer_0_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_uartlite_1_1/sim/design_mb_axi_uartlite_1_1.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_uartlite_2_1/sim/design_mb_axi_uartlite_2_1.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_quad_spi_0_0/sim/design_mb_axi_quad_spi_0_0.vhd" \
+"../../../bd/design_mb/ip/design_mb_axi_quad_spi_1_0/sim/design_mb_axi_quad_spi_1_0.vhd" \
+
+nosort

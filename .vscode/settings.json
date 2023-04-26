@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "xil_printf.h": "c",
+        "xil_io.h": "c",
+        "xgpio_l.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
