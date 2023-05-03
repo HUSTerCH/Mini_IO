@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Wed Apr 12 09:08:06 2023
+| Date                      : Wed Apr 26 19:45:45 2023
 | Host                      : FengSheng running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_mb_wrapper_io_placed.rpt
 | Design                    : design_mb_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            69 |
+|            72 |
 +---------------+
 
 
@@ -130,7 +130,7 @@ Table of Contents
 | F3         |                                  | High Range | IO_L13N_T2_MRCC_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | F4         |                                  | High Range | IO_L13P_T2_MRCC_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | F5         |                                  | High Range | IO_0_35                      | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| F6         |                                  | High Range | IO_L19N_T3_VREF_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| F6         | UART2_tx                         | High Range | IO_L19N_T3_VREF_35           | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | F7         |                                  |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | F8         |                                  |            | VCCINT                       | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | F9         |                                  |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -197,7 +197,7 @@ Table of Contents
 | J16        |                                  |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | J17        | seven_seg_led_an_tri_o[0]        | High Range | IO_L23P_T3_FOE_B_15          | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | J18        | seven_seg_led_an_tri_o[1]        | High Range | IO_L23N_T3_FWE_B_15          | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| K1         |                                  | High Range | IO_L23N_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| K1         | UART1_rx                         | High Range | IO_L23N_T3_35                | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | K2         | seven_seg_led_an_tri_o[6]        | High Range | IO_L23P_T3_35                | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | K3         |                                  | High Range | IO_L2P_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K4         |                                  | High Range | VCCO_34                      | VCCO        |             |      34 |            |      |                     |                      |    1.80 |            |           |          |      |                  |              |                   |              |

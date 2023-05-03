@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Wed Apr 12 08:48:21 2023
+//Date        : Wed Apr 26 19:39:50 2023
 //Host        : FengSheng running 64-bit major release  (build 9200)
 //Command     : generate_target design_mb.bd
 //Design      : design_mb
@@ -17,12 +17,15 @@ module design_mb
     SCLK1,
     SS0,
     SS1,
+    UART1_rx,
+    UART2_tx,
     dip_switches_16bits_tri_i,
     dual_seven_seg_led_disp_tri_o,
     led_16bits_tri_o,
     push_buttons_5bits_tri_i,
     reset,
     rgb_led_tri_o,
+    rx_0,
     seven_seg_led_an_tri_o,
     sys_clock,
     usb_uart_rxd,
@@ -33,12 +36,15 @@ module design_mb
   output SCLK1;
   output [0:0]SS0;
   output [0:0]SS1;
+  input UART1_rx;
+  output UART2_tx;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 dip_switches_16bits TRI_I" *) input [15:0]dip_switches_16bits_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 dual_seven_seg_led_disp TRI_O" *) output [7:0]dual_seven_seg_led_disp_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_16bits TRI_O" *) output [15:0]led_16bits_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 push_buttons_5bits TRI_I" *) input [4:0]push_buttons_5bits_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rgb_led TRI_O" *) output [5:0]rgb_led_tri_o;
+  input rx_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 seven_seg_led_an TRI_O" *) output [7:0]seven_seg_led_an_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_mb_sys_clock, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input sys_clock;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart RxD" *) input usb_uart_rxd;
@@ -329,9 +335,11 @@ module design_mb
   wire [0:0]rst_clk_wiz_1_100M_bus_struct_reset;
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
+  wire rx_1_1;
   wire sys_clock_1;
   wire [6:0]xlconcat_0_dout;
 
+  assign UART2_tx = axi_uartlite_2_tx;
   assign axi_gpio_0_GPIO_TRI_I = dip_switches_16bits_tri_i[15:0];
   assign axi_gpio_2_GPIO_TRI_I = push_buttons_5bits_tri_i[4:0];
   assign axi_uartlite_0_UART_RxD = usb_uart_rxd;
@@ -339,6 +347,7 @@ module design_mb
   assign led_16bits_tri_o[15:0] = axi_gpio_0_GPIO2_TRI_O;
   assign reset_1 = reset;
   assign rgb_led_tri_o[5:0] = axi_gpio_2_GPIO2_TRI_O;
+  assign rx_1_1 = UART1_rx;
   assign seven_seg_led_an_tri_o[7:0] = axi_gpio_1_GPIO_TRI_O;
   assign sys_clock_1 = sys_clock;
   assign usb_uart_txd = axi_uartlite_0_UART_TxD;
@@ -541,7 +550,7 @@ module design_mb
         .tx(axi_uartlite_0_UART_TxD));
   design_mb_axi_uartlite_1_1 axi_uartlite_1
        (.interrupt(axi_uartlite_1_interrupt),
-        .rx(axi_uartlite_2_tx),
+        .rx(rx_1_1),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M06_AXI_ARADDR[3:0]),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),

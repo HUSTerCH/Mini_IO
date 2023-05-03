@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Wed Apr 12 08:50:38 2023
 -- Host        : FengSheng running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               D:/vivado_project/Mini_IO/Mini_IO.srcs/sources_1/bd/design_mb/ip/design_mb_axi_gpio_2_0/design_mb_axi_gpio_2_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_mb_axi_gpio_2_0 -prefix
+--               design_mb_axi_gpio_2_0_ design_mb_axi_gpio_2_0_stub.vhdl
 -- Design      : design_mb_axi_gpio_2_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

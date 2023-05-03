@@ -1,6 +1,21 @@
-18:54:29 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+20:55:56 **** Auto Build of configuration Debug for project SeriesIOControl ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
 
-18:54:30 Build Finished (took 206ms)
+20:55:57 Build Finished (took 1s.400ms)
 

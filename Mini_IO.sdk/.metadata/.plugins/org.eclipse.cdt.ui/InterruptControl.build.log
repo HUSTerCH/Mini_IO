@@ -1,4 +1,4 @@
-18:48:58 **** Build of configuration Debug for project InterruptControl ****
+16:45:17 **** Auto Build of configuration Debug for project InterruptControl ****
 make all 
 Building file: ../src/InterruptControl.c
 Invoking: MicroBlaze gcc compiler
@@ -17,5 +17,5 @@ mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
 Finished building: InterruptControl.elf.size
  
 
-18:48:59 Build Finished (took 1s.238ms)
+16:45:18 Build Finished (took 1s.399ms)
 

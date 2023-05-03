@@ -1,21 +1,6 @@
-18:48:59 **** Build of configuration Debug for project ProgramControl ****
+13:05:26 **** Incremental Build of configuration Debug for project ProgramControl ****
 make all 
-Building file: ../src/ProgramControl.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
-Finished building: ../src/ProgramControl.c
- 
-Building target: ProgramControl.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: ProgramControl.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
-Finished building: ProgramControl.elf.size
- 
+make: Nothing to be done for 'all'.
 
-18:49:01 Build Finished (took 1s.276ms)
+13:05:26 Build Finished (took 215ms)
 

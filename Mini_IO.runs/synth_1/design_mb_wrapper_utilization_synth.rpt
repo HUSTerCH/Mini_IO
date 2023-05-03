@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Apr 12 09:04:08 2023
+| Date         : Wed Apr 26 19:42:51 2023
 | Host         : FengSheng running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_mb_wrapper_utilization_synth.rpt -pb design_mb_wrapper_utilization_synth.pb
 | Design       : design_mb_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   68 |     0 |       210 | 32.38 |
+| Bonded IOB                  |   70 |     0 |       210 | 33.33 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -146,8 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   44 |                  IO |
-| IBUF     |   24 |                  IO |
+| OBUF     |   45 |                  IO |
+| IBUF     |   25 |                  IO |
 +----------+------+---------------------+
 
 

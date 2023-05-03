@@ -2151,3 +2151,1633 @@ make: Nothing to be done for 'all'.
 18:54:29 **** Incremental Build of configuration Debug for project SeriesIOControl ****
 make all 
 make: Nothing to be done for 'all'.
+19:31:10 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+19:31:16 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+19:31:35 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+19:32:21 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+19:32:32 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+19:50:07 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+19:50:14 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+19:52:19 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+../src/SeriesIOControl.c:8:10: fatal error: xil_io.h: No such file or directory
+ #include "xil_io.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/SeriesIOControl.o] Error 1
+19:54:03 **** Auto Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+19:54:20 **** Auto Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+19:54:22 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+19:54:23 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+19:54:25 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+19:54:35 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:26:10 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+20:26:14 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:26:31 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:26:43 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:27:30 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:27:41 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:30:07 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+20:30:32 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:30:51 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:31:33 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:31:48 **** Incremental Build of configuration Debug for project SeriesIOControl ****
+make all 
+make: Nothing to be done for 'all'.
+20:35:27 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+../src/SeriesIOControl.c: In function 'My_ISR':
+../src/SeriesIOControl.c:60:16: error: unknown type name 'bbbbbbbbbbbbbbbbbbbb'
+     int status;bbbbbbbbbbbbbbbbbbbb
+                ^~~~~~~~~~~~~~~~~~~~
+../src/SeriesIOControl.c:61:5: error: redeclaration of 'status' with no linkage
+     status = Xil_In32(XPAR_AXI_INTC_0_BASEADDR + XIN_ISR_OFFSET);
+     ^~~~~~
+../src/SeriesIOControl.c:60:9: note: previous declaration of 'status' was here
+     int status;bbbbbbbbbbbbbbbbbbbb
+         ^~~~~~
+make: *** [src/subdir.mk:23: src/SeriesIOControl.o] Error 1
+20:35:35 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+10:53:20 **** Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+10:53:39 **** Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+10:53:43 **** Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+10:53:44 **** Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+10:53:45 **** Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+10:53:47 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+10:53:54 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+10:57:10 **** Auto Build of project HelloWorld_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+10:57:22 **** Auto Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    360	   3108	   6608	   19d0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+10:57:23 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+10:57:24 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+10:57:25 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+11:42:04 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+11:47:58 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4688	    360	   3104	   8152	   1fd8	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+11:52:19 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+../src/ProgramControl.c: In function 'main':
+../src/ProgramControl.c:46:13: error: too many arguments to function 'print'
+             print("%h",led);
+             ^~~~~
+In file included from d:\vivado_2018_03\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/ProgramControl.c:8:
+d:\vivado_2018_03\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: declared here
+ void    _EXFUN(print, (const char* ));
+         ^
+make: *** [src/subdir.mk:23: src/ProgramControl.o] Error 1
+11:53:05 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+../src/ProgramControl.c: In function 'main':
+../src/ProgramControl.c:46:22: warning: conversion lacks type at end of format [-Wformat=]
+             printf("%h",led);
+                      ^
+../src/ProgramControl.c:46:20: warning: too many arguments for format [-Wformat-extra-args]
+             printf("%h",led);
+                    ^~~~
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: ProgramControl.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 66256 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ProgramControl.elf] Error 1
+11:55:23 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8140	    364	   3112	  11616	   2d60	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+11:55:45 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+11:56:43 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8140	    364	   3112	  11616	   2d60	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+11:56:45 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+11:58:37 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8140	    364	   3112	  11616	   2d60	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+12:03:17 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+../src/ProgramControl.c: In function 'main':
+../src/ProgramControl.c:52:18: error: 'XPAR_AXI_GPIO_2_BSEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_2_BASEADDR'?
+         Xil_Out8(XPAR_AXI_GPIO_2_BSEADDR + XGPIO_DATA2_OFFSET, led);
+                  ^~~~~~~~~~~~~~~~~~~~~~~
+                  XPAR_AXI_GPIO_2_BASEADDR
+../src/ProgramControl.c:52:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/ProgramControl.o] Error 1
+12:03:30 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8172	    364	   3112	  11648	   2d80	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+12:05:00 **** Auto Build of configuration Debug for project ProgramControl ****
+make all 
+Building file: ../src/ProgramControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl.d" -MT"src/ProgramControl.o" -o "src/ProgramControl.o" "../src/ProgramControl.c"
+Finished building: ../src/ProgramControl.c
+ 
+Building target: ProgramControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl.elf"  ./src/ProgramControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl.elf  |tee "ProgramControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8196	    364	   3112	  11672	   2d98	ProgramControl.elf
+Finished building: ProgramControl.elf.size
+ 
+12:05:08 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+13:04:52 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+13:05:26 **** Incremental Build of configuration Debug for project ProgramControl ****
+make all 
+make: Nothing to be done for 'all'.
+
+**** Build of configuration Debug for project ProgramControl2 ****
+
+Nothing to build for project ProgramControl2
+
+****  of configuration Debug for project ProgramControl2 ****
+
+Nothing to build for project ProgramControl2
+14:27:44 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ProgramControl2.elf] Error 1
+14:27:59 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ProgramControl2.elf] Error 1
+14:30:33 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ProgramControl2.elf] Error 1
+14:44:43 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:16:20: warning: unused variable 'ledState' [-Wunused-variable]
+     unsigned short ledState;
+                    ^~~~~~~~
+../src/ProgramControl2.c:15:37: warning: unused variable 'currentSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                                     ^~~~~~~~~~~~~~~~~~
+../src/ProgramControl2.c:15:20: warning: unused variable 'lastSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                    ^~~~~~~~~~~~~~~
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6140	    364	   3112	   9616	   2590	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+14:44:45 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:30 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+14:47:54 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+14:55:09 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:17:20: warning: unused variable 'ledState' [-Wunused-variable]
+     unsigned short ledState;
+                    ^~~~~~~~
+../src/ProgramControl2.c:16:37: warning: unused variable 'currentSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                                     ^~~~~~~~~~~~~~~~~~
+../src/ProgramControl2.c:16:20: warning: unused variable 'lastSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                    ^~~~~~~~~~~~~~~
+../src/ProgramControl2.c:15:26: warning: unused variable 'num2' [-Wunused-variable]
+     unsigned short num1, num2;
+                          ^~~~
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6348	    364	   3112	   9824	   2660	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+14:55:13 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+14:58:09 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:17:20: warning: unused variable 'ledState' [-Wunused-variable]
+     unsigned short ledState;
+                    ^~~~~~~~
+../src/ProgramControl2.c:16:37: warning: unused variable 'currentSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                                     ^~~~~~~~~~~~~~~~~~
+../src/ProgramControl2.c:16:20: warning: unused variable 'lastSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                    ^~~~~~~~~~~~~~~
+../src/ProgramControl2.c:15:26: warning: unused variable 'num2' [-Wunused-variable]
+     unsigned short num1, num2;
+                          ^~~~
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6348	    364	   3112	   9824	   2660	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+14:58:14 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:05:08 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:17:20: warning: unused variable 'ledState' [-Wunused-variable]
+     unsigned short ledState;
+                    ^~~~~~~~
+../src/ProgramControl2.c:16:37: warning: unused variable 'currentSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                                     ^~~~~~~~~~~~~~~~~~
+../src/ProgramControl2.c:16:20: warning: unused variable 'lastSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                    ^~~~~~~~~~~~~~~
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6728	    364	   3108	  10200	   27d8	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:05:16 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:06:01 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:08:33 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:17:20: warning: unused variable 'ledState' [-Wunused-variable]
+     unsigned short ledState;
+                    ^~~~~~~~
+../src/ProgramControl2.c:16:37: warning: unused variable 'currentSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                                     ^~~~~~~~~~~~~~~~~~
+../src/ProgramControl2.c:16:20: warning: unused variable 'lastSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                    ^~~~~~~~~~~~~~~
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6728	    364	   3108	  10200	   27d8	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:09:33 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:17:20: warning: unused variable 'ledState' [-Wunused-variable]
+     unsigned short ledState;
+                    ^~~~~~~~
+../src/ProgramControl2.c:16:37: warning: unused variable 'currentSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                                     ^~~~~~~~~~~~~~~~~~
+../src/ProgramControl2.c:16:20: warning: unused variable 'lastSwitchState' [-Wunused-variable]
+     unsigned short lastSwitchState, currentSwitchState;
+                    ^~~~~~~~~~~~~~~
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6728	    364	   3108	  10200	   27d8	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:24:05 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6872	    364	   3108	  10344	   2868	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:25:12 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:28:41 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6880	    364	   3108	  10352	   2870	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:28:47 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:32:05 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6904	    364	   3108	  10376	   2888	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:32:17 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:35:38 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6936	    364	   3108	  10408	   28a8	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:35:42 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:37:26 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6936	    364	   3108	  10408	   28a8	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:37:30 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:38:17 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6936	    364	   3108	  10408	   28a8	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:38:19 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:41:01 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	    364	   3108	  10416	   28b0	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:41:59 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6944	    364	   3108	  10416	   28b0	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:42:40 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:50:16: warning: 'lastLEDState' may be used uninitialized in this function [-Wmaybe-uninitialized]
+             if (currentLEDState != lastLEDState) {
+                ^
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6936	    364	   3108	  10408	   28a8	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:43:13 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:42:17: error: 'currentLEDState' undeclared (first use in this function); did you mean 'currentSwitchState'?
+                 currentLEDState = num1;
+                 ^~~~~~~~~~~~~~~
+                 currentSwitchState
+../src/ProgramControl2.c:42:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/ProgramControl2.o] Error 1
+15:43:21 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+../src/ProgramControl2.c: In function 'main':
+../src/ProgramControl2.c:60:17: error: 'currentLEDState' undeclared (first use in this function); did you mean 'currentSwitchState'?
+                 currentLEDState = num2;
+                 ^~~~~~~~~~~~~~~
+                 currentSwitchState
+../src/ProgramControl2.c:60:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/ProgramControl2.o] Error 1
+15:43:24 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6872	    364	   3108	  10344	   2868	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:43:31 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:44:29 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:45:29 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:46:06 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6880	    364	   3108	  10352	   2870	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:46:13 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:47:44 **** Auto Build of configuration Debug for project ProgramControl2 ****
+make all 
+Building file: ../src/ProgramControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ProgramControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ProgramControl2.d" -MT"src/ProgramControl2.o" -o "src/ProgramControl2.o" "../src/ProgramControl2.c"
+Finished building: ../src/ProgramControl2.c
+ 
+Building target: ProgramControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ProgramControl2.elf"  ./src/ProgramControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProgramControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size ProgramControl2.elf  |tee "ProgramControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6880	    364	   3108	  10352	   2870	ProgramControl2.elf
+Finished building: ProgramControl2.elf.size
+ 
+15:47:47 **** Incremental Build of configuration Debug for project ProgramControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+15:56:39 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+16:25:24 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8140	    290	   3122	  11552	   2d20	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+16:25:57 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+16:26:09 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+16:26:39 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8144	    290	   3118	  11552	   2d20	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+16:27:01 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+16:27:43 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+16:28:29 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+16:28:42 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+16:28:59 **** Incremental Build of configuration Debug for project InterruptControl ****
+make all 
+make: Nothing to be done for 'all'.
+16:45:17 **** Auto Build of configuration Debug for project InterruptControl ****
+make all 
+Building file: ../src/InterruptControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl.d" -MT"src/InterruptControl.o" -o "src/InterruptControl.o" "../src/InterruptControl.c"
+Finished building: ../src/InterruptControl.c
+ 
+Building target: InterruptControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl.elf"  ./src/InterruptControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl.elf  |tee "InterruptControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+Finished building: InterruptControl.elf.size
+ 
+
+**** Build of configuration Debug for project InterruptControl2 ****
+
+Nothing to build for project InterruptControl2
+16:46:13 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl2.elf] Error 1
+16:46:29 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/vivado_2018_03/sdk/2018.3/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl2.elf] Error 1
+17:03:19 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+../src/InterruptControl2.c: In function 'My_ISR':
+../src/InterruptControl2.c:78:16: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     if (status & XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK == XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) {
+                ^
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/InterruptControl2.o: In function `My_ISR':
+D:\vivado_project\Mini_IO\Mini_IO.sdk\InterruptControl2\Debug/../src/InterruptControl2.c:79: undefined reference to `btnhandler'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: InterruptControl2.elf] Error 1
+17:03:35 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+../src/InterruptControl2.c: In function 'My_ISR':
+../src/InterruptControl2.c:78:16: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     if (status & XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK == XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) {
+                ^
+../src/InterruptControl2.c:79:9: warning: implicit declaration of function 'btnHandler'; did you mean 'btnhandler'? [-Wimplicit-function-declaration]
+         btnHandler();
+         ^~~~~~~~~~
+         btnhandler
+../src/InterruptControl2.c: At top level:
+../src/InterruptControl2.c:83:6: warning: conflicting types for 'btnHandler'
+ void btnHandler() {
+      ^~~~~~~~~~
+../src/InterruptControl2.c:79:9: note: previous implicit declaration of 'btnHandler' was here
+         btnHandler();
+         ^~~~~~~~~~
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6352	    264	   3104	   9720	   25f8	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:03:47 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+../src/InterruptControl2.c: In function 'My_ISR':
+../src/InterruptControl2.c:78:16: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     if (status & XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK == XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) {
+                ^
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6352	    264	   3104	   9720	   25f8	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:03:50 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+17:04:05 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+../src/InterruptControl2.c: In function 'My_ISR':
+../src/InterruptControl2.c:76:16: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     if (status & XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK == XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) {
+                ^
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6352	    264	   3104	   9720	   25f8	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:05:14 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6352	    264	   3104	   9720	   25f8	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:06:03 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6380	    264	   3108	   9752	   2618	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:06:09 **** Incremental Build of configuration Debug for project InterruptControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+17:06:52 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6488	    264	   3104	   9856	   2680	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:07:01 **** Incremental Build of configuration Debug for project InterruptControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+17:08:18 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6584	    264	   3104	   9952	   26e0	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:08:25 **** Incremental Build of configuration Debug for project InterruptControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+17:15:59 **** Auto Build of configuration Debug for project InterruptControl2 ****
+make all 
+Building file: ../src/InterruptControl2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/InterruptControl2.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/InterruptControl2.d" -MT"src/InterruptControl2.o" -o "src/InterruptControl2.o" "../src/InterruptControl2.c"
+Finished building: ../src/InterruptControl2.c
+ 
+Building target: InterruptControl2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "InterruptControl2.elf"  ./src/InterruptControl2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: InterruptControl2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size InterruptControl2.elf  |tee "InterruptControl2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7160	    264	   3120	  10544	   2930	InterruptControl2.elf
+Finished building: InterruptControl2.elf.size
+ 
+17:16:12 **** Incremental Build of configuration Debug for project InterruptControl2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:06:20 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+20:09:57 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+20:54:29 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 
+20:55:56 **** Auto Build of configuration Debug for project SeriesIOControl ****
+make all 
+Building file: ../src/SeriesIOControl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SeriesIOControl.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SeriesIOControl.d" -MT"src/SeriesIOControl.o" -o "src/SeriesIOControl.o" "../src/SeriesIOControl.c"
+Finished building: ../src/SeriesIOControl.c
+ 
+Building target: SeriesIOControl.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "SeriesIOControl.elf"  ./src/SeriesIOControl.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: SeriesIOControl.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5064	    286	   3122	   8472	   2118	SeriesIOControl.elf
+Finished building: SeriesIOControl.elf.size
+ 

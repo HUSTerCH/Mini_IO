@@ -17,6 +17,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports MOSI]
 set_property PACKAGE_PIN H14 [get_ports SCLK0]
 set_property IOSTANDARD LVCMOS33 [get_ports SCLK0]
 
+set_property PACKAGE_PIN F6 [get_ports UART2_tx]
+set_property IOSTANDARD LVCMOS33 [get_ports UART2_tx]
+
+set_property PACKAGE_PIN K1 [get_ports UART1_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports UART1_rx]
+
 
 set_property PACKAGE_PIN M18 [get_ports {push_buttons_5bits_tri_i[0]}]
 set_property PACKAGE_PIN P17 [get_ports {push_buttons_5bits_tri_i[1]}]
