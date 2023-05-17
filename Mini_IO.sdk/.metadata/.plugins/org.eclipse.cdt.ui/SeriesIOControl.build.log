@@ -1,4 +1,4 @@
-20:55:56 **** Auto Build of configuration Debug for project SeriesIOControl ****
+16:37:54 **** Auto Build of configuration Debug for project SeriesIOControl ****
 make all 
 Building file: ../src/SeriesIOControl.c
 Invoking: MicroBlaze gcc compiler
@@ -17,5 +17,5 @@ mb-size SeriesIOControl.elf  |tee "SeriesIOControl.elf.size"
 Finished building: SeriesIOControl.elf.size
  
 
-20:55:57 Build Finished (took 1s.400ms)
+16:37:55 Build Finished (took 1s.190ms)
 

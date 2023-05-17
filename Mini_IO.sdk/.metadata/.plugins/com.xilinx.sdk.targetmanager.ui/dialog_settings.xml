@@ -3,7 +3,7 @@
 	<item value="design_mb_wrapper.bit" key="design_mb_wrapper_hw_platform_0-bitFile"/>
 	<item value="Auto Detect" key="design_mb_wrapper_hw_platform_0-device"/>
 	<item value="design_mb_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
-	<item value="D:\vivado_project\Mini_IO\Mini_IO.sdk\InterruptControl2\Debug\InterruptControl2.elf" key="design_mb_wrapper_hw_platform_0-microblaze_0-initElf"/>
+	<item value="D:\vivado_project\Mini_IO\Mini_IO.sdk\elec_Wednesday\Debug\elec_Wednesday.elf" key="design_mb_wrapper_hw_platform_0-microblaze_0-initElf"/>
 	<item value="design_mb_wrapper.mmi" key="design_mb_wrapper_hw_platform_0-bmmFile"/>
 	<item value="false" key="design_mb_wrapper_hw_platform_0-partial_bit"/>
 	<item value="Local" key="design_mb_wrapper_hw_platform_0-target"/>

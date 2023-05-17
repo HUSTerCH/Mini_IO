@@ -112,7 +112,7 @@ void btnHandler() {
         tmp[k] = 0;
         k = (k + 1) % 8;
         break;
-    case 0x02: 
+    case 0x02:
         tmp[k] = 1;
         k = (k + 1) % 8;
         break;

@@ -1,0 +1,21 @@
+21:37:05 **** Auto Build of configuration Debug for project elec_Monday ****
+make all 
+Building file: ../src/elec_monday.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/elec_monday.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/elec_monday.d" -MT"src/elec_monday.o" -o "src/elec_monday.o" "../src/elec_monday.c"
+Finished building: ../src/elec_monday.c
+ 
+Building target: elec_Monday.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "elec_Monday.elf"  ./src/elec_monday.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: elec_Monday.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size elec_Monday.elf  |tee "elec_Monday.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7632	    300	   3132	  11064	   2b38	elec_Monday.elf
+Finished building: elec_Monday.elf.size
+ 
+
+21:37:07 Build Finished (took 1s.342ms)
+

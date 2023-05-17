@@ -3,8 +3,14 @@
 	<section name="ShowViewDialog">
 		<item value="335" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="com.xilinx.sdk.terminal.sdkterminal" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="437" key="DIALOG_HEIGHT"/>
 		<item value="589" key="DIALOG_X_ORIGIN"/>
 		<item value="215" key="DIALOG_Y_ORIGIN"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="Remote Systems"/>
+			<item value="Terminal"/>
+			<item value="Xilinx"/>
+		</list>
 	</section>
 </section>

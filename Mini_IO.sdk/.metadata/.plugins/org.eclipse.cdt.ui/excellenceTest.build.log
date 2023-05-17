@@ -1,0 +1,21 @@
+20:59:14 **** Auto Build of configuration Debug for project excellenceTest ****
+make all 
+Building file: ../src/test.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+Finished building: ../src/test.c
+ 
+Building target: excellenceTest.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "excellenceTest.elf"  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: excellenceTest.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size excellenceTest.elf  |tee "excellenceTest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7332	    300	   3128	  10760	   2a08	excellenceTest.elf
+Finished building: excellenceTest.elf.size
+ 
+
+20:59:15 Build Finished (took 940ms)
+
