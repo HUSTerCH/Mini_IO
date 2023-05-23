@@ -1,0 +1,21 @@
+19:13:29 **** Build of configuration Debug for project Exam ****
+make all 
+Building file: ../src/exam.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/exam.o" -I../../HelloWorld_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/exam.d" -MT"src/exam.o" -o "src/exam.o" "../src/exam.c"
+Finished building: ../src/exam.c
+ 
+Building target: Exam.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Exam.elf"  ./src/exam.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Exam.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size Exam.elf  |tee "Exam.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7356	    300	   3136	  10792	   2a28	Exam.elf
+Finished building: Exam.elf.size
+ 
+
+19:13:41 Build Finished (took 12s.0ms)
+

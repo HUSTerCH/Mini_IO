@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-   4608	    286	   3114	   8008	   1f48	InterruptControl.elf
+   8144	    290	   3118	  11552	   2d20	InterruptControl.elf

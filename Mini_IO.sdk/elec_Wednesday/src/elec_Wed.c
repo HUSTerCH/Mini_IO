@@ -18,14 +18,15 @@ void btn_handler();
 void My_ISR() __attribute__((interrupt_handler));
 
 int i = 0;
-int j = 0;
-int hasClickedLeftBtn = 0;
 unsigned short currentBtn, lastBtn, realBtn;
+unsigned short input;
 unsigned short num;
+unsigned short judge;
+unsigned short change;
 unsigned short pos = 0xfffe;
-unsigned short undefinedCode = 0xff;
-//segCode为0-f的七段数码管译码显示码，以8421BCD码为下标，如segCode[3]=0xb0，segCode[e]=0x86;
-unsigned short segCode[] = {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90,0x88,0x83,0xa7,0xa1,0x86,0x8e};
+unsigned short minusSymbol = 0xbf;
+//segCode为0-f的七段数码管译码显示码，以8421BCD码为下标，如segCode[3]=0xb0
+unsigned short segCode[] = {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90/*,0x88,0x83,0xa7,0xa1,0x86,0x8e*/};
 
 
 int main() {
@@ -33,17 +34,8 @@ int main() {
     // 和程序控制一样，设置LED为输出，switch为输入
     Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_TRI2_OFFSET, 0x0);
     Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_TRI_OFFSET, 0xffff);
-// GPIO_0使能中断：
-// XGPIO_IER_OFFSET：GPIO外设中用于中断使能的寄存器地址偏移量；IER: interrupt enable register
-// XGPIO_IR_CH1_MASK：这是一个掩码，用于指定GPIO外设的第1个IO口所对应的中断信号。在这里，将这个掩码写入到中断使能寄存器中，表示使能GPIO的第1个IO口产生中断。
-// XGPIO_GIE_OFFSET：这是GPIO外设中用于总中断使能的寄存器地址偏移量，通过向这个寄存器写入某个值，可以使得GPIO外设的所有中断信号都被使能
-// XGPIO_GIE_GINTR_ENABLE_MASK：这是一个掩码，用于开启所有GPIO中断信号的总中断使能。将这个掩码写入到总中断使能寄存器中，表示开启GPIO外设所有中断信号的总中断使能
     Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_IER_OFFSET, XGPIO_IR_CH1_MASK);
     Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_GIE_OFFSET, XGPIO_GIE_GINTR_ENABLE_MASK);
-// INTC：interrupt controller
-// XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK：GPIO中断的掩码。它用于控制哪个GPIO中断源可以激活中断。GPIO可能有多个中断源，这个掩码用于标识哪些中断源是可以激活中断的。
-// XIN_MER_OFFSET:Interrupt Controller的Master Enable寄存器的偏移地址。这个寄存器用于启用或禁用整个中断控制器的中断信号，以及硬件中断和软件中断的全局控制。
-// XIN_INT_MASTER_ENABLE_MASK 和 XIN_INT_HARDWARE_ENABLE_MASK：两个掩码，MASTER使能中断控制器的主总线，HARDWARE则使能硬件中断信号。
     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK);  // interrupt channel
     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_MER_OFFSET, XIN_INT_MASTER_ENABLE_MASK | XIN_INT_HARDWARE_ENABLE_MASK);
 
@@ -90,22 +82,7 @@ void My_ISR() {
     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IAR_OFFSET, status);
     if ((status & XPAR_AXI_TIMER_0_INTERRUPT_MASK) == XPAR_AXI_TIMER_0_INTERRUPT_MASK) {
     	display_seg();
-    	if (hasClickedLeftBtn == 1) {
-    		if (j < 195) {
-    			j++;
-    			xil_printf("j=%d\n",j);
-    		}
-    		else {
-    			j = 0;
-    			pos = pos << 1;
-                pos += 1;
-                i++;
-                if (i == 8) {
-                    i = 0;
-                    pos = 0xfffe;
-                }
-    		}
-    	}
+    	
     }
     Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IAR_OFFSET, status);
 }
@@ -124,18 +101,19 @@ void btn_handler() {
             }
         }
     switch (realBtn) {
-    case 0x02:
-        hasClickedLeftBtn = 0;
+    case 0x01:
         pos = 0xfffe;
-        j = 0;
         i = 0;
-		num = Xil_In16(XPAR_AXI_GPIO_0_BASEADDR+XGPIO_DATA_OFFSET);
-        num &= 0x000f;
-        xil_printf("led low 4 bits: %x\n",num);
+		input = Xil_In16(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_DATA_OFFSET);
+        num = input & 0x0007;
+        judge = input & 0x0008;
+        judge = judge >> 3;
+        change = input & 0xc000;
+        change = change >> 14;
+        xil_printf("switch low 3 bits: %x\n",num);
+        xil_printf("symbol : %x\n",judge);
+        xil_printf("change :%x\n",change);
         display_seg();
-        break;
-    case 0x04:
-    	hasClickedLeftBtn = 1;
         break;
     default:
         break;
@@ -144,7 +122,31 @@ void btn_handler() {
 }
 
 void display_seg() {
-    Xil_Out8(XPAR_AXI_GPIO_1_BASEADDR + XGPIO_DATA2_OFFSET,segCode[num]);
+    unsigned short displayNum;
+    switch(change) {
+        case 0:
+            displayNum = num;
+            break;
+        case 1:
+            displayNum = ~num;
+            displayNum &= 0x07;
+            break;
+        case 2:
+            if (judge == 1) displayNum = 0x08 - num;
+            else displayNum = num;
+            break;
+        default:
+            displayNum = num;
+            break;
+    }
+    Xil_Out8(XPAR_AXI_GPIO_1_BASEADDR + XGPIO_DATA2_OFFSET,(pos == 0xfffe)? segCode[displayNum] : (judge == 0x0001) ?  minusSymbol : 0xff);
     Xil_Out8(XPAR_AXI_GPIO_1_BASEADDR + XGPIO_DATA_OFFSET ,pos);
+    i++;
+    pos = pos << 1;
+    pos++;
+    if (i == 2) {
+        i = 0;
+        pos = 0xfffe;
+    }
     Xil_Out32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET, Xil_In32(XPAR_AXI_TIMER_0_BASEADDR+XTC_TCSR_OFFSET));
 }

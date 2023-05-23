@@ -1,0 +1,140 @@
+/*
+ * InterruptControl.c
+ *
+ *  Created on: Apr 11, 2023
+ *      Author: Luo Chang
+ */
+#include "xil_io.h"
+#include "stdio.h"
+#include "xgpio_l.h"
+#include "xintc_l.h"
+#include "xtmrctr_l.h"
+#define RESET_VALUE 10000000
+
+void segTimerCounterHandler();
+void btnHandler();
+void switchHandler();
+void My_ISR() __attribute__((interrupt_handler));
+int i = 0;
+
+unsigned short currentBtn, lastBtn, realBtn;
+char segcode[6] = {0xc6, 0xc1, 0xc7, 0x88, 0xc0, 0xff};
+short tmp[8] = {5, 5, 5, 5, 5, 5, 5, 5};
+int k = 0;
+short pos = 0xff7f;
+
+int main() {
+    // 和程序控制一样，设置LED为输出，switch为输入
+    Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_TRI2_OFFSET, 0x0);
+    Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_TRI_OFFSET, 0xffff);
+// GPIO_0使能中断：
+// XGPIO_IER_OFFSET：GPIO外设中用于中断使能的寄存器地址偏移量；IER: interrupt enable register
+// XGPIO_IR_CH1_MASK：这是一个掩码，用于指定GPIO外设的第1个IO口所对应的中断信号。在这里，将这个掩码写入到中断使能寄存器中，表示使能GPIO的第1个IO口产生中断。
+// XGPIO_GIE_OFFSET：这是GPIO外设中用于总中断使能的寄存器地址偏移量，通过向这个寄存器写入某个值，可以使得GPIO外设的所有中断信号都被使能
+// XGPIO_GIE_GINTR_ENABLE_MASK：这是一个掩码，用于开启所有GPIO中断信号的总中断使能。将这个掩码写入到总中断使能寄存器中，表示开启GPIO外设所有中断信号的总中断使能
+    Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_IER_OFFSET, XGPIO_IR_CH1_MASK);
+    Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_GIE_OFFSET, XGPIO_GIE_GINTR_ENABLE_MASK);
+// INTC：interrupt controller
+// XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK：GPIO中断的掩码。它用于控制哪个GPIO中断源可以激活中断。GPIO可能有多个中断源，这个掩码用于标识哪些中断源是可以激活中断的。
+// XIN_MER_OFFSET:Interrupt Controller的Master Enable寄存器的偏移地址。这个寄存器用于启用或禁用整个中断控制器的中断信号，以及硬件中断和软件中断的全局控制。
+// XIN_INT_MASTER_ENABLE_MASK 和 XIN_INT_HARDWARE_ENABLE_MASK：两个掩码，MASTER使能中断控制器的主总线，HARDWARE则使能硬件中断信号。
+    Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK);  // interrupt channel
+    Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_MER_OFFSET, XIN_INT_MASTER_ENABLE_MASK | XIN_INT_HARDWARE_ENABLE_MASK);
+
+    Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR + XGPIO_TRI_OFFSET, 0x0);  // set seg show signal as output
+    Xil_Out32(XPAR_AXI_GPIO_1_BASEADDR + XGPIO_TRI2_OFFSET, 0x0);  // set seg pos signal as output
+    Xil_Out32(XPAR_AXI_GPIO_2_BASEADDR + XGPIO_TRI_OFFSET, 0x1f);  // btn input
+// 同上的GPIO_0部分
+    Xil_Out32(XPAR_AXI_GPIO_2_BASEADDR + XGPIO_IER_OFFSET, XGPIO_IR_CH1_MASK);  // allow channel 1 interrupt
+    Xil_Out32(XPAR_AXI_GPIO_2_BASEADDR + XGPIO_GIE_OFFSET, XGPIO_GIE_GINTR_ENABLE_MASK);  // allow GPIO interrupt output
+// TCSR：Timer Control/Status Register
+    xil_printf("before:0x%x\n",Xil_In32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET));
+    Xil_Out32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET,
+              Xil_In32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET) & ~XTC_CSR_ENABLE_TMR_MASK);  // write TCSR, stop counter
+    xil_printf("after:0x%x\n",Xil_In32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET));
+    
+// 写TLR，预置初始值为RESET_VALUE（100000）
+// TLR:Timer Load Register，用于设置定时器的计数器初始值。
+    Xil_Out32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TLR_OFFSET, RESET_VALUE);  // write TLR, preset counter value
+
+// XTC_CSR_LOAD_MASK：用于启用定时器的加载操作的掩码值
+// 启动定时器的加载操作
+    Xil_Out32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET,
+              Xil_In32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET) | XTC_CSR_LOAD_MASK);  // get counter initial value
+              
+// 定时器配置为启用向下计数模式，自动重装载计数器值，同时允许定时器中断
+    Xil_Out32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET,
+              (Xil_In32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET) & ~XTC_CSR_LOAD_MASK)
+			  | XTC_CSR_ENABLE_TMR_MASK | XTC_CSR_AUTO_RELOAD_MASK | XTC_CSR_ENABLE_INT_MASK | XTC_CSR_DOWN_COUNT_MASK);
+
+    Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IER_OFFSET, XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK | XPAR_AXI_TIMER_0_INTERRUPT_MASK);  //Enable the interrupt controller
+
+    Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_MER_OFFSET, XIN_INT_MASTER_ENABLE_MASK | XIN_INT_HARDWARE_ENABLE_MASK);
+    microblaze_enable_interrupts();  // allow microbalze enable interrupt
+    return 0;
+}
+
+void My_ISR() {
+    int status;
+    // XIN_ISR_OFFSET：中断状态寄存器偏移地址
+    status = Xil_In32(XPAR_AXI_INTC_0_BASEADDR + XIN_ISR_OFFSET);
+    if((status & XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK) == XPAR_AXI_GPIO_0_IP2INTC_IRPT_MASK) {
+            switchHandler();
+    }
+    // XIN_IAR_OFFSET：中断应答寄存器偏移地址
+    Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IAR_OFFSET, status);
+    if ((status & XPAR_AXI_TIMER_0_INTERRUPT_MASK) == XPAR_AXI_TIMER_0_INTERRUPT_MASK) {
+    	segTimerCounterHandler();
+    }
+    if ((status & XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) == XPAR_AXI_GPIO_2_IP2INTC_IRPT_MASK) {
+        btnHandler();
+    }
+    Xil_Out32(XPAR_AXI_INTC_0_BASEADDR + XIN_IAR_OFFSET, status);
+}
+
+void segTimerCounterHandler() {
+    Xil_Out8(XPAR_AXI_GPIO_1_BASEADDR + XGPIO_DATA2_OFFSET, segcode[tmp[(i + k) % 8]]);
+    Xil_Out8(XPAR_AXI_GPIO_1_BASEADDR + XGPIO_DATA_OFFSET, pos);
+    pos = pos >> 1;
+    i++;
+    if (i == 8) {
+        i = 0;
+        pos = 0xff7f;
+    }
+    Xil_Out32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET, Xil_In32(XPAR_AXI_TIMER_0_BASEADDR + XTC_TCSR_OFFSET));  // clear interrupt
+}
+
+void btnHandler() {
+    int btncode;
+    btncode = Xil_In32(XPAR_AXI_GPIO_2_BASEADDR + XGPIO_DATA_OFFSET);
+    switch (btncode) {
+    case 0x01: 
+        tmp[k] = 0;
+        k = (k + 1) % 8;
+        break;
+    case 0x02:
+        tmp[k] = 1;
+        k = (k + 1) % 8;
+        break;
+    case 0x04: 
+        tmp[k] = 2;
+        k = (k + 1) % 8;
+        break;
+    case 0x08: 
+        tmp[k] = 3;
+        k = (k + 1) % 8;
+        break;
+    case 0x10: 
+        tmp[k] = 4;
+        k = (k + 1) % 8;
+        break;
+    
+    }
+    Xil_Out32(XPAR_AXI_GPIO_2_BASEADDR + XGPIO_ISR_OFFSET, Xil_In32(XPAR_AXI_GPIO_2_BASEADDR + XGPIO_ISR_OFFSET));
+}
+
+void switchHandler() {
+    Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_DATA2_OFFSET, Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_DATA_OFFSET));
+    Xil_Out32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_ISR_OFFSET, Xil_In32(XPAR_AXI_GPIO_0_BASEADDR + XGPIO_ISR_OFFSET));
+}
+

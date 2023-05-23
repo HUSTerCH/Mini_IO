@@ -1,0 +1,28 @@
+/*
+ * ProgramControl.c
+ *
+ *  Created on: Apr 11, 2023
+ *      Author: Luo Chang
+ */
+
+#include <stdio.h>
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xgpio_l.h"
+void delay_500ms();
+
+int main() {
+    while (1) {
+        short data = 0x8000;
+        for (int i = 0; i < 16; i++) {
+            Xil_Out16(XPAR_GPIO_0_BASEADDR+XGPIO_DATA2_OFFSET,data);
+            delay_500ms();
+            data = data >> 1;
+        }
+        
+    }
+}
+void delay_500ms() {
+    for (int i = 0; i < 500 * 10000; i++);
+}
+    
